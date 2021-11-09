@@ -3,6 +3,7 @@ const personOne = {
   age: 34,
   favouriteFood: "Spinach",
 };
+const { name, age, favouriteFood } = personOne;
 
 function introduceYourself(___________________________) {
   console.log(
