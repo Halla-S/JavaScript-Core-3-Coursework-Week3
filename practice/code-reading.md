@@ -12,6 +12,8 @@ Take a look at the following code:
 5        console.log(x);
 6    }
 7    console.log(x);
+
+- x is a global variable we are passing a copy of its value  as a parameter , the value of a function parameter is copied to another location of the memory. When accessing or modifying the variable within the function, it accesses only the copy. So there is no effect on the original value.
 ```
 
 Explain why line 4 and line 6 output different numbers.
@@ -34,6 +36,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+-The output is : y is not defined.
+-y is a local to the function.  it's undefined out of it . 
 
 ## Question 3
 
@@ -62,3 +66,7 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+-The output is : x =9 , y ={ x: 10 }.
+-The first function x was a global variable it passed by value to the function and that means it's original value will not change .
+while in the second function y was passed by reference because  in Javascript objects and arrays are passed by reference.passing the parameter by reference means that the actual value of the variable is passed as a parameter so the variable's original value will change.
+
